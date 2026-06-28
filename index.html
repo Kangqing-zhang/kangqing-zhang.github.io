@@ -3,151 +3,307 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kangqing Zhang | PhD Candidate</title>
+  <title>Kangqing Zhang | PhD Candidate </title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
+      color: #2b2b2b;
+      background-color: #f7f7f7;
       line-height: 1.7;
-      color: #222;
-      background-color: #f7f8fa;
     }
-    header {
-      background-color: #243f3a;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
+    .banner {
+      height: 230px;
+      background: linear-gradient(rgba(30, 50, 45, 0.35), rgba(30, 50, 45, 0.35)),
+                  url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
     }
-    header h1 {
-      font-size: 42px;
-      margin: 0;
-    }
-    header p {
-      font-size: 18px;
-      margin-top: 12px;
-      color: #dce8e5;
-    }
-    nav {
-      background-color: white;
-      padding: 15px 20px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-    }
-    nav a {
-      margin: 0 14px;
-      text-decoration: none;
-      color: #243f3a;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
+    .container {
+      max-width: 1100px;
+      margin: -40px auto 40px auto;
       padding: 0 20px;
     }
-    section {
+    .site-title {
       background-color: white;
-      margin-bottom: 30px;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      padding: 35px 40px 20px 40px;
+      border-radius: 12px 12px 0 0;
     }
-    h2 {
+    .site-title h1 {
+      margin: 0;
+      font-size: 42px;
       color: #243f3a;
-      margin-top: 0;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 8px;
     }
-    h3 {
-      color: #345c57;
-      margin-bottom: 5px;
+    .site-title p {
+      margin-top: 8px;
+      color: #666;
+      font-size: 17px;
     }
-    .tagline {
-      font-size: 19px;
+    .layout {
+      display: grid;
+      grid-template-columns: 270px 1fr 210px;
+      gap: 28px;
+      background-color: white;
+      padding: 30px 40px 45px 40px;
+      border-radius: 0 0 12px 12px;
+    }
+    .profile-photo {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .photo-note {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+    .info-box {
+      background-color: #f0f0f0;
+      padding: 15px;
+      margin-bottom: 12px;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+    .info-box strong {
+      color: #243f3a;
+    }
+    .links-title {
+      margin-top: 24px;
+      margin-bottom: 10px;
       font-weight: bold;
+      color: #555;
+    }
+    .link-box {
+      background-color: #f0f0f0;
+      padding: 12px 15px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+    .link-box a {
+      color: #333;
+      text-decoration: none;
+    }
+    .link-box a:hover {
+      text-decoration: underline;
+    }
+    main h2 {
+      font-size: 30px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #243f3a;
+    }
+    main h3 {
       color: #345c57;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    .intro-small {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+    .statement {
+      font-size: 26px;
+      line-height: 1.45;
+      font-weight: bold;
+      margin-bottom: 28px;
+    }
+    .highlight-green {
+      color: #5f8f86;
+    }
+    .highlight-brown {
+      color: #b78b4b;
+    }
+    .highlight-purple {
+      color: #8c79a8;
+    }
+    .card {
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .card-blue {
+      background-color: #e7f0f3;
+    }
+    .card-green {
+      background-color: #edf4ec;
+    }
+    .card-orange {
+      background-color: #f8eddf;
+    }
+    .card-purple {
+      background-color: #f1eef6;
+    }
+    .pages {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 18px;
+      align-self: start;
+      position: sticky;
+      top: 20px;
+      background-color: white;
+    }
+    .pages h2 {
+      margin-top: 0;
+      font-size: 26px;
+      color: #333;
+    }
+    .pages a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin: 9px 0;
+      font-size: 15px;
+    }
+    .pages a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
-      padding: 30px 20px;
-      color: #666;
+      color: #777;
       font-size: 14px;
+      padding: 30px 20px;
     }
-    a {
-      color: #1f6f8b;
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 25px;
+      }
+      .pages {
+        position: static;
+      }
+      .site-title {
+        padding: 30px 25px 15px 25px;
+      }
+      .site-title h1 {
+        font-size: 34px;
+      }
+      .statement {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Kangqing Zhang</h1>
-    <p>PhD Research in Ecology<br>
-    University of Groningen</p >
-  </header>
-  <nav>
-    <a href=" ">About</a >
-    <a href="#research">Research</a >
-    <a href="#notes">Notes</a >
-    <a href="#contact">Contact</a >
-  </nav>
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p class="tagline">
-        A personal record of my PhD research.
-      </p >
-      <p>
-        I am a PhD researcher at the University of Groningen. My PhD study focuses on the impact
-        of seasonal environmental variation, and global variation therein, on the gut bacterial
-        community composition and function of birds.
-      </p >
-      <p>
-        I explore seasonal changes in avian gut bacterial communities from the perspective of
-        physiology and immune function, using an environment–bird–microbiome model system.
-      </p >
-      <p>
-        This website is a simple space to record my PhD research, project development,
-        academic notes, and related reflections.
-      </p >
-    </section>
-    <section id="research">
-      <h2>Research</h2>
-      <h3>Urban pigeons</h3>
-      <p>
-        This project focuses on seasonal variation in urban feral pigeons in Groningen,
-        with an interest in how diet, environment, and microbial communities may change
-        across seasons and locations.
-      </p >
-      <h3>Skylarks</h3>
-      <p>
-        This project explores temporal variation in wild skylarks across months, years,
-        and annual cycle stages.
-      </p >
-    </section>
-    <section id="notes">
-      <h2>Notes</h2>
-      <p>
-        I use this section to keep track of research progress, ideas, manuscript development,
-        figures, reading notes, and thoughts that emerge during my PhD.
-      </p >
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Kangqing Zhang<br>
-        University of Groningen<br>
-        Groningen, the Netherlands
-      </p >
-      <p>
-        Email: Jina.zhang@rug.nl
-      </p >
-    </section>
-  </main>
+  <div class="banner"></div>
+  <div class="container">
+    <div class="site-title">
+      <h1>Kangqing Zhang</h1>
+      <p>PhD Candidate in Ecology | University of Groningen</p >
+    </div>
+    <div class="layout">
+      <aside class="left-column">
+        < img class="profile-photo" 
+             src="https://images.unsplash.com/photo-1501706362039-c6e809cfae43?auto=format&fit=crop&w=600&q=80" 
+             alt="Profile image">
+        <div class="photo-note">
+          Photo can be replaced later.
+        </div>
+        <div class="info-box">
+          <strong>University of Groningen</strong><br>
+          Groningen, the Netherlands
+        </div>
+        <div class="info-box">
+          PhD researcher in ecology
+        </div>
+        <div class="info-box">
+          Email: Jina.zhang@rug.nl
+        </div>
+        <div class="links-title">Find me also in:</div>
+        <div class="link-box">
+          <a href="https://orcid.org/0000-0001-8898-4769">ORCID</a >
+        </div>
+        <div class="link-box">
+          <a href="https://www.linkedin.com/in/kangqing Zhang/">LinkedIn</a >
+        </div>
+        <div class="link-box">
+          <a href="https://github.com/kangqing-zhang">GitHub</a >
+        </div>
+      </aside>
+      <main>
+        <section id="about">
+          <p class="intro-small">
+            Hi! Welcome to my PhD research website.
+          </p >
+          <div class="statement">
+            I study <span class="highlight-green">birds</span>,
+            <span class="highlight-brown">seasonal environments</span>, and
+            <span class="highlight-purple">gut microbiome communities</span>.
+          </div>
+          <p>
+            The goal of my PhD study is to address the impact of seasonal environmental variation,
+            and the global variation therein, on the gut microbiome community composition and
+            function in birds.
+          </p >
+          <p>
+            I explore seasonal changes in the gut microbiome communities of birds from the perspective
+            of physiological and immune function, using an environment–bird–microbiome model system.
+          </p >
+          <p>
+            This website is a personal space to record my PhD research, project development,
+            academic notes, and related reflections.
+          </p >
+        </section>
+        <section id="research">
+          <h2>Research</h2>
+          <div class="card card-blue">
+            <h3>Urban pigeons</h3>
+            <p>
+              This project focuses on seasonal variation in urban feral pigeons in Groningen,
+              with an interest in how diet, environment, and microbial communities may change
+              across seasons and locations.
+            </p >
+          </div>
+          <div class="card card-green">
+            <h3>Skylarks</h3>
+            <p>
+              This project explores temporal variation in wild skylarks across months, years,
+              and annual cycle stages.
+            </p >
+          </div>
+          <div class="card card-orange">
+            <h3>Short-term changes in wild birds</h3>
+            <p>
+              This project examines short-term changes in wild birds and how these changes may
+              relate to ecological and physiological conditions.
+            </p >
+          </div>
+        </section>
+        <section id="notes">
+          <h2>Notes</h2>
+          <div class="card card-purple">
+            <h3>Research notes</h3>
+            <p>
+              I use this section to keep track of research progress, ideas, manuscript development,
+              figures, reading notes, and thoughts that emerge during my PhD.
+            </p >
+          </div>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            Kangqing Zhang<br>
+            University of Groningen<br>
+            Groningen, the Netherlands
+          </p >
+          <p>
+            Email: Jina.zhang@rug.nl
+          </p >
+        </section>
+      </main>
+      <aside class="pages">
+        <h2>Pages</h2>
+        <a href="#about">About</a >
+        <a href="#research">Research</a >
+        <a href="#notes">Notes</a >
+        <a href="#contact">Contact</a >
+      </aside>
+    </div>
+  </div>
   <footer>
     © 2026 Kangqing Zhang
   </footer>
